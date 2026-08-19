@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuvem | Agua Purificada y Garrafones a Domicilio · Región de Veracruz</title>
+  <meta name="description" content="Nuvem purifica agua en 6 etapas con ósmosis inversa, filtración de carbón activado y luz UV. Garrafones de 20 litros y botellas individuales para tu hogar o comunidad en la región de Veracruz. Cotiza hoy por WhatsApp.">
+  <meta name="keywords" content="agua purificada Veracruz, garrafones de agua, ósmosis inversa, purificadora de agua, agua a domicilio, estación dispensadora de agua, Nuvem">
+  <meta property="og:title" content="Nuvem | Agua Purificada, de la Naturaleza a tu Hogar">
+  <meta property="og:description" content="Agua purificada en 6 etapas para tu hogar o comunidad. Garrafones y botellas individuales en la región de Veracruz.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/nuvem-logo.jpg">
+  <link rel="icon" type="image/jpeg" href="img/nuvem-logo.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════════════ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-bulb">
+      <img src="img/nuvem-logo.jpg" alt="" loading="eager">
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <span class="loader-text">Cargando...</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <header id="navbar" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#hero" class="nav-logo" aria-label="Nuvem — inicio">
+          <div class="nav-logo-icon" aria-hidden="true">
+            <img src="img/nuvem-logo.jpg" alt="" loading="eager">
+          </div>
+          <div class="nav-logo-copy">
+            <span>Nuvem</span>
+            <span>Agua Purificada</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <ul class="nav-links">
+            <li><a href="#why">Beneficios</a></li>
+            <li><a href="#ambientes">Presentaciones</a></li>
+            <li><a href="#proceso">Proceso</a></li>
+            <li><a href="#producto">Estación Nuvem</a></li>
+            <li><a href="#paquetes">Paquetes</a></li>
+            <li><a href="#local">Nuestro Local</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contacto" class="btn-gold nav-cta" style="font-size:13px; padding:12px 26px;">
+          Cotizar Ahora
+        </a>
+
+        <button class="hamburger" id="hamburger"
+                aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (fuera del header: backdrop-filter en #navbar.is-scrolled
+       crea un containing block nuevo para hijos position:fixed y rompe el inset:0) -->
+  <div id="mob-menu" aria-label="Menú móvil">
+    <a href="#why">Beneficios</a>
+    <a href="#ambientes">Presentaciones</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#producto">Estación Nuvem</a>
+    <a href="#paquetes">Paquetes</a>
+    <a href="#local">Nuestro Local</a>
+    <a href="#contacto">Contacto</a>
+    <a href="#contacto">Cotizar Ahora →</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <main>
+    <section id="hero" aria-labelledby="hero-heading">
+
+      <!-- Parallax background image (fixed) -->
+      <div class="hero-bg" aria-hidden="true"></div>
+      <!-- Dark overlays -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <!-- Grid texture -->
+      <div class="hero-grid" aria-hidden="true"></div>
+      <!-- Canvas particle orbs -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- Light shafts -->
+      <div class="hero-rays" aria-hidden="true">
+        <div class="hero-ray r1"></div>
+        <div class="hero-ray r2"></div>
+        <div class="hero-ray r3"></div>
+        <div class="hero-ray r4"></div>
+        <div class="hero-ray r5"></div>
+      </div>
+      <!-- Film grain overlay -->
+      <div class="hero-grain" aria-hidden="true"></div>
+      <!-- One-shot scan reveal -->
+      <div class="hero-scanline" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content">
+
+          <!-- Live badge -->
+          <div class="hero-badge" id="hero-badge" aria-hidden="true">
+            <div class="badge-dot"></div>
+            Agua Purificada · Región de Veracruz
+          </div>
+
+          <!-- Animated title -->
+          <h1 class="hero-title" id="hero-heading">
+            <span class="line"><span>Agua pura,</span></span>
+            <span class="line"><span>directo de la</span></span>
+            <span class="line"><span class="accent">naturaleza.</span></span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-sub" id="hero-sub">
+            En Nuvem <strong>purificamos el agua en 6 etapas</strong> —ósmosis inversa, carbón activado y luz UV— para acercar la esencia de la naturaleza a tu hogar. Accesible, confiable y pensada para familias y comunidades enteras.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-ctas" id="hero-ctas">
+            <a href="#contacto" class="btn-gold">
+              Cotizar Instalación
+              <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i>
+            </a>
+            <a href="#proceso" class="btn-outline">
+              <i class="fa-solid fa-droplet" style="font-size:15px; color:var(--gray);"></i>
+              Conoce el Proceso
+            </a>
+          </div>
+
+          <!-- Trust bar -->
+          <div class="hero-trust" id="hero-trust" aria-label="Credenciales">
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              Ósmosis Inversa
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-item">
+              <i class="fa-solid fa-filter"></i>
+              6 Etapas de Purificación
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-item">
+              <i class="fa-solid fa-location-dot"></i>
+              Región de Veracruz
+            </div>
+          </div>
+
+        </div><!-- /.hero-content -->
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-mouse-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         MARQUEE
+    ══════════════════════════════════════════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner" id="marquee"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         WHY — Features (sin imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="why" aria-labelledby="why-heading">
+      <div class="container">
+
+        <div class="why-header">
+          <div class="reveal">
+            <div class="label">La diferencia Nuvem</div>
+            <h2 class="why-quote" id="why-heading">
+              La pureza no siempre se nota a simple vista…
+              <em> pero tu cuerpo sí la agradece.</em>
+            </h2>
+          </div>
+          <p class="why-sub reveal d2">
+            Combinamos tecnología de purificación de vanguardia con un modelo de servicio accesible, para transformar el agua común en agua confiable, todos los días, para toda la familia.
+          </p>
+        </div>
+
+        <div class="features-grid">
+
+          <div class="f-card reveal">
+            <div class="f-num" aria-hidden="true">01</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-filter"></i>
+            </div>
+            <h3>Purificación en 6 Etapas</h3>
+            <p>Ósmosis inversa, carbón activado, resina catiónica, ozono y luz UV se combinan en cada llenado de tu garrafón.</p>
+          </div>
+
+          <div class="f-card reveal d1">
+            <div class="f-num" aria-hidden="true">02</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <h3>Hogares y Comunidades</h3>
+            <p>Desde el consumo diario en casa hasta el abasto de comunidades enteras a través de nuestras estaciones.</p>
+          </div>
+
+          <div class="f-card reveal d2">
+            <div class="f-num" aria-hidden="true">03</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3>Compromiso Sustentable</h3>
+            <p>Cuidamos el recurso más valioso mientras ayudamos a reducir el consumo de plástico de un solo uso.</p>
+          </div>
+
+          <div class="f-card reveal d3">
+            <div class="f-num" aria-hidden="true">04</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Calidad Garantizada</h3>
+            <p>Control constante del proceso de filtración para que cada garrafón cumpla siempre el mismo estándar de pureza.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         AMBIENTES — Presentaciones (con imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="ambientes" aria-labelledby="amb-heading">
+      <div class="container">
+
+        <div class="ambientes-top">
+          <div class="reveal">
+            <div class="label">Cómo llevamos el agua a tu hogar</div>
+            <h2 class="section-title" id="amb-heading">
+              Una solución<br>
+              <span class="gold">para cada necesidad</span>
+            </h2>
+            <p style="color:var(--gray); margin-top:16px; font-size:15.5px; max-width:440px; line-height:1.7;">
+              Elige la forma en la que quieres recibir agua Nuvem.
+            </p>
+          </div>
+          <div class="reveal d2">
+            <span class="ambiente-pill">¿Cuál necesitas hoy?</span>
+          </div>
+        </div>
+
+        <div class="ambientes-grid">
+
+          <!-- Garrafón 20L -->
+          <div class="amb-card reveal">
+            <img class="amb-img"
+              src="img/nuvem-estacion-01.jpg"
+              alt="Niña sostiene un garrafón de agua purificada Nuvem frente a una Estación dispensadora">
+            <div class="amb-overlay">
+              <div class="amb-icon-wrap"
+                   style="background:rgba(127,179,217,0.15); border-color:rgba(127,179,217,0.4);"
+                   aria-hidden="true">
+                <i class="fa-solid fa-droplet" style="color:#93c5fd;"></i>
+              </div>
+              <h3>Garrafón 20 Litros</h3>
+              <p>Llena tu garrafón limpio en la Estación Nuvem más cercana. Ideal para el consumo diario del hogar.</p>
+              <div class="amb-temp">Desde $15 MXN</div>
+            </div>
+          </div>
+
+          <!-- Botella individual -->
+          <div class="amb-card reveal d1">
+            <img class="amb-img"
+              src="img/nuvem-estacion-04.jpg"
+              alt="Niña con playera Nuvem sostiene una botella individual de agua purificada">
+            <div class="amb-overlay">
+              <div class="amb-icon-wrap"
+                   style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3);"
+                   aria-hidden="true">
+                <i class="fa-solid fa-bottle-water" style="color:white;"></i>
+              </div>
+              <h3>Botella Individual</h3>
+              <p>Agua purificada lista para llevar. Perfecta para la escuela, el trabajo o cualquier salida.</p>
+              <div class="amb-temp">Presentación Personal</div>
+            </div>
+          </div>
+
+          <!-- Estación en comunidad -->
+          <div class="amb-card reveal d2">
+            <img class="amb-img"
+              src="img/nuvem-estacion-05.jpg"
+              alt="Estación dispensadora de agua purificada Nuvem instalada en una comunidad">
+            <div class="amb-overlay">
+              <div class="amb-icon-wrap"
+                   style="background:rgba(201,162,39,0.15); border-color:rgba(232,205,122,0.4);"
+                   aria-hidden="true">
+                <i class="fa-solid fa-map-location-dot" style="color:#e8cd7a;"></i>
+              </div>
+              <h3>Estación en tu Comunidad</h3>
+              <p>Llevamos e instalamos una Estación Nuvem para que todo tu vecindario tenga acceso a agua purificada.</p>
+              <div class="amb-temp">Solicita tu Instalación</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PROCESO — How we work (sin imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="proceso" aria-labelledby="proceso-heading">
+      <div class="container">
+
+        <div class="proceso-header reveal">
+          <div class="label">Así de fácil</div>
+          <h2 class="section-title" id="proceso-heading">
+            Simple, higiénico y <span class="gold">al instante</span>
+          </h2>
+          <p>Del garrafón vacío al agua pura, en menos de un minuto.</p>
+        </div>
+
+        <div class="proceso-grid">
+
+          <div class="proceso-step reveal">
+            <div class="step-number">Paso 01</div>
+            <h3>Trae tu garrafón limpio</h3>
+            <p>Preséntate en la Estación Nuvem más cercana con tu garrafón limpio y colócalo bajo la boquilla dispensadora.</p>
+          </div>
+
+          <div class="proceso-step reveal d1">
+            <div class="step-number">Paso 02</div>
+            <h3>Inserta el monto deseado</h3>
+            <p>Presiona inicio, deposita el monto y la máquina te entregará el agua equivalente al instante.</p>
+          </div>
+
+          <div class="proceso-step reveal d2">
+            <div class="step-number">Paso 03</div>
+            <h3>Listo, agua pura al instante</h3>
+            <p>Ósmosis inversa, filtración y luz UV garantizan cada llenado. Retira tu garrafón y disfruta.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         ESTACIÓN NUVEM — Producto estrella (con imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="producto" aria-labelledby="prod-heading">
+      <div class="container">
+        <div class="producto-wrap">
+
+          <!-- Info -->
+          <div class="reveal">
+            <div class="label">Nuestra Tecnología</div>
+            <h2 class="section-title" id="prod-heading">
+              La Estación Nuvem<br>
+              <span class="gold">purifica en 6 etapas</span>
+            </h2>
+            <p class="producto-lead">
+              Cada Estación Nuvem transforma agua común en agua confiable mediante un sistema de filtración avanzado, disponible para tu comunidad todos los días.
+            </p>
+
+            <ul class="feature-rows" aria-label="Etapas de purificación Nuvem">
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-filter"></i></div>
+                <div>
+                  <h4>Sedimentos y Carbón Activado</h4>
+                  <p>Elimina cloro, sedimentos y partículas que alteran el sabor y el olor del agua.</p>
+                </div>
+              </li>
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-magnet"></i></div>
+                <div>
+                  <h4>Resina Catiónica</h4>
+                  <p>Ablanda el agua reduciendo el sarro y el calcio para un resultado más ligero.</p>
+                </div>
+              </li>
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-droplet"></i></div>
+                <div>
+                  <h4>Ósmosis Inversa</h4>
+                  <p>Membranas de alta precisión retienen impurezas microscópicas y sales disueltas.</p>
+                </div>
+              </li>
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-sun"></i></div>
+                <div>
+                  <h4>Luz UV + Sistema de Ozono</h4>
+                  <p>Desinfección final que garantiza agua segura, lista para tomarse con confianza.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="specs-bar" role="list" aria-label="Especificaciones de la Estación Nuvem">
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">6</span>
+                <span class="spec-name">Etapas de Filtración</span>
+              </div>
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">20 L</span>
+                <span class="spec-name">Garrafón Estándar</span>
+              </div>
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">24/7</span>
+                <span class="spec-name">Disponibilidad</span>
+              </div>
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">100%</span>
+                <span class="spec-name">Agua Purificada</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual -->
+          <div class="reveal d2">
+            <div class="panel-scene">
+              <div class="led-panel-body"
+                   role="img" aria-label="Estación dispensadora de agua purificada Nuvem">
+              </div>
+              <div class="p-badge pb-tl" aria-hidden="true">
+                <div class="p-badge-dot"></div>
+                Estación Activa — Región Veracruz
+              </div>
+              <div class="p-badge pb-br" aria-hidden="true">
+                <i class="fa-solid fa-droplet" style="color:var(--gold);"></i>
+                Ósmosis Inversa
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         NUESTRO LOCAL — Estación física real (con imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="local" aria-labelledby="local-heading">
+      <div class="container">
+        <div class="local-wrap">
+
+          <!-- Info -->
+          <div class="reveal">
+            <div class="label">Nuestra Estación</div>
+            <h2 class="section-title" id="local-heading">
+              Conócenos en<br>
+              <span class="gold">nuestro local</span>
+            </h2>
+            <p class="local-lead">
+              Somos un negocio local con presencia física, no solo una máquina anónima. Autoservicio las 24 horas, para que tengas agua purificada disponible cuando la necesites.
+            </p>
+
+            <div class="cofepris-badge">
+              <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+              <div>
+                <strong>Validado por COFEPRIS</strong>
+                <span>NOM-201-SSA1-2015 — Norma Oficial de agua purificada</span>
+              </div>
+            </div>
+
+            <div class="local-facts">
+              <div class="local-fact">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <p><strong>Autoservicio 24 horas.</strong> Ven cuando te convenga, todos los días del año.</p>
+              </div>
+              <div class="local-fact">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+                <p><strong>Somos parte de la comunidad.</strong> Decoramos y convivimos con nuestros clientes en fechas especiales.</p>
+              </div>
+              <div class="local-fact">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <p><strong>Proceso verificado.</strong> Cumplimos la normativa oficial mexicana para agua purificada.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto real del local -->
+          <div class="reveal d2">
+            <div class="local-photo">
+              <img src="img/nuvem-local-fachada.jpg"
+                   alt="Fachada real de la estación Nuvem de agua purificada, autoservicio 24 horas, validada por COFEPRIS">
+              <div class="local-photo-tag">
+                <i class="fa-solid fa-location-dot" style="color:var(--gold-light);"></i>
+                Estación Nuvem — Autoservicio 24h
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Galería de momentos reales -->
+        <div class="local-gallery">
+          <div class="local-gallery-card reveal">
+            <img src="img/nuvem-cultura-mexicana.jpg"
+                 alt="Estación Nuvem decorada para celebrar la cultura mexicana con una modelo en traje típico">
+            <div class="local-gallery-caption">Celebrando nuestras raíces junto a la comunidad</div>
+          </div>
+          <div class="local-gallery-card reveal d1">
+            <img src="img/nuvem-comunidad-01.jpg"
+                 alt="Clientas usando la estación de autoservicio Nuvem para surtir su garrafón">
+            <div class="local-gallery-caption">Vecinos que confían en Nuvem cada semana</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PAQUETES DE INSTALACIÓN — para emprendedores (sin imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="paquetes" aria-labelledby="paquetes-heading">
+      <div class="container">
+
+        <div class="proceso-header reveal">
+          <div class="label">Para Emprendedores</div>
+          <h2 class="section-title" id="paquetes-heading">
+            Instala tu propia <span class="gold">Estación Nuvem</span>
+          </h2>
+          <p>¿Quieres llevar agua purificada a tu colonia o negocio? Diseñamos e instalamos el sistema completo, a la medida de la demanda de tu zona.</p>
+        </div>
+
+        <div class="features-grid">
+
+          <div class="f-card reveal">
+            <div class="f-icon" aria-hidden="true"><i class="fa-solid fa-gauge"></i></div>
+            <h3>Paquete Simple</h3>
+            <p>250 garrafones al día, operación manual. 3 bombas presurizadoras, zeolita, carbón activado, resina catiónica, ósmosis inversa, ozono manual y lámpara UV.</p>
+          </div>
+
+          <div class="f-card reveal d1">
+            <div class="f-icon" aria-hidden="true"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Paquete Intermedio</h3>
+            <p>450 garrafones al día, totalmente automatizado. Válvulas eléctricas, ósmosis inversa y sistema de ozono con encendido automático.</p>
+          </div>
+
+          <div class="f-card reveal d2">
+            <div class="f-icon" aria-hidden="true"><i class="fa-solid fa-industry"></i></div>
+            <h3>Paquete Premium</h3>
+            <p>900 garrafones al día, totalmente automatizado. Doble membrana de ósmosis inversa para mayor capacidad de purificación.</p>
+          </div>
+
+          <div class="f-card reveal d3">
+            <div class="f-icon" aria-hidden="true"><i class="fa-solid fa-warehouse"></i></div>
+            <h3>Paquete Delux</h3>
+            <p>900 garrafones al día. Tanques de mayor capacidad (2 pies³) y doble ventanilla despachadora para atender más rápido.</p>
+          </div>
+
+        </div>
+
+        <p style="text-align:center; color:var(--gray); font-size:14.5px; max-width:680px; margin:36px auto 0; line-height:1.7;">
+          También instalamos equipo complementario: <strong style="color:var(--gray-light);">suavizador de agua básico o ultra</strong> (elimina sarro y calcio de tuberías), <strong style="color:var(--gray-light);">purificadora doméstica de 6 etapas</strong> para tu propia casa, y <strong style="color:var(--gray-light);">filtros de carbón activado</strong> independientes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         STATS
+    ══════════════════════════════════════════════════ -->
+    <section id="stats" aria-label="Estadísticas clave">
+      <div class="container">
+        <div class="stats-grid reveal" role="list">
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="6" data-suffix=" etapas"
+                 aria-label="6 etapas">0</div>
+            <div class="stat-lbl">Proceso de<br>purificación</div>
+          </div>
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="20" data-suffix=" L"
+                 aria-label="20 litros">0</div>
+            <div class="stat-lbl">Garrafón<br>estándar Nuvem</div>
+          </div>
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="100" data-suffix="%"
+                 aria-label="100%">0</div>
+            <div class="stat-lbl">Agua purificada<br>garantizada</div>
+          </div>
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="2" data-suffix=" formas"
+                 aria-label="2 formas">0</div>
+            <div class="stat-lbl">Garrafón y<br>botella individual</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTORES (sin imagen de fondo)
+    ══════════════════════════════════════════════════ -->
+    <section id="sectores" aria-labelledby="sec-heading">
+      <div class="container">
+
+        <div class="sectores-hdr reveal">
+          <div class="label">Sectores</div>
+          <h2 class="section-title" id="sec-heading">
+            Ideal para <span class="gold">cada contexto</span>
+          </h2>
+          <p>Desde hogares hasta comunidades completas, llevamos agua pura a donde se necesite.</p>
+        </div>
+
+        <div class="sectores-grid" role="list">
+          <div class="sector-card reveal" role="listitem">
+            <i class="fa-solid fa-house sector-icon" aria-hidden="true"></i>
+            <h3>Hogares</h3>
+          </div>
+          <div class="sector-card reveal d1" role="listitem">
+            <i class="fa-solid fa-people-roof sector-icon" aria-hidden="true"></i>
+            <h3>Comunidades</h3>
+          </div>
+          <div class="sector-card reveal d2" role="listitem">
+            <i class="fa-solid fa-school sector-icon" aria-hidden="true"></i>
+            <h3>Escuelas</h3>
+          </div>
+          <div class="sector-card reveal d3" role="listitem">
+            <i class="fa-solid fa-store sector-icon" aria-hidden="true"></i>
+            <h3>Comercios</h3>
+          </div>
+          <div class="sector-card reveal d4" role="listitem">
+            <i class="fa-solid fa-calendar-days sector-icon" aria-hidden="true"></i>
+            <h3>Eventos</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CONTACTO
+    ══════════════════════════════════════════════════ -->
+    <section id="contacto" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="contact-hdr reveal">
+          <div class="label">Contacto</div>
+          <h2 class="section-title" id="contact-heading">
+            Hablemos de <span class="gold">tu Estación Nuvem</span>
+          </h2>
+          <p>Cotiza tu garrafón, tu botella o la instalación de una estación en tu comunidad. Te respondemos por WhatsApp.</p>
+        </div>
+
+        <div class="contact-box reveal">
+
+          <!-- Info panel -->
+          <div class="contact-info">
+            <h3>Atención Nuvem</h3>
+            <p class="ci-sub">Agua purificada, de la naturaleza a tu hogar.</p>
+
+            <ul class="ci-list">
+              <li class="ci-item">
+                <div class="ci-icon" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="ci-body">
+                  <h4>Cobertura</h4>
+                  <p>Región de Veracruz<br>
+                     (Xalapa y alrededores).</p>
+                </div>
+              </li>
+              <li class="ci-item">
+                <div class="ci-icon" aria-hidden="true">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="ci-body">
+                  <h4>Teléfono</h4>
+                  <p>
+                    <a href="tel:2281603426">228 160 3426</a>
+                  </p>
+                </div>
+              </li>
+              <li class="ci-item">
+                <div class="ci-icon" aria-hidden="true">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="ci-body">
+                  <h4>WhatsApp</h4>
+                  <p>Escríbenos y cotizamos en minutos.</p>
+                  <a href="https://wa.me/522281603426" target="_blank"
+                     rel="noopener noreferrer" class="ci-wa-link">
+                    Abrir chat →
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div><!-- /.contact-info -->
+
+          <!-- Form -->
+          <div class="contact-form-wrap">
+            <h3>Solicitar Cotización</h3>
+            <form id="wa-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-name">Nombre completo</label>
+                  <input type="text" id="f-name" class="form-control"
+                         placeholder="Ej. Nombre Apellido" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-interest">¿Qué necesitas?</label>
+                  <select id="f-interest" class="form-control">
+                    <option>Cotización general</option>
+                    <option>Garrafón 20 Litros</option>
+                    <option>Botella Individual</option>
+                    <option>Instalación de Estación</option>
+                    <option>Mantenimiento</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-msg">Detalle de tu solicitud</label>
+                <textarea id="f-msg" class="form-control" rows="4" required
+                          placeholder="Cuéntanos cuántos garrafones necesitas, tu zona de entrega o cualquier detalle relevante…"></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <i class="fa-brands fa-whatsapp"></i>
+                Enviar a WhatsApp
+              </button>
+              <p class="form-note">
+                Al enviar serás redirigido a WhatsApp para continuar la conversación.
+              </p>
+            </form>
+          </div>
+
+        </div><!-- /.contact-box -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="img/nuvem-logo.jpg" alt="Nuvem" loading="lazy">
+          <span>Nuvem</span>
+        </div>
+        <p class="footer-copy">
+          &copy; <span id="year"></span> Nuvem. Todos los derechos reservados. Región de Veracruz.
+        </p>
+        <div class="footer-socials">
+          <a href="https://wa.me/522281603426" target="_blank"
+             rel="noopener noreferrer" class="footer-soc" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════
+       FLOATING WHATSAPP
+  ══════════════════════════════════════════════════════ -->
+  <a href="https://wa.me/522281603426?text=Hola%2C%20visit%C3%A9%20su%20sitio%20web%20de%20Nuvem%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n."
+     target="_blank" rel="noopener noreferrer"
+     class="wa-btn" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
