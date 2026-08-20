@@ -58,7 +58,7 @@
   if (marquee) {
     const items = [
       'Agua Purificada', 'Ósmosis Inversa', '6 Etapas de Filtración',
-      'Garrafones de 20L', 'Botella Individual', 'Región Veracruz',
+      'Garrafones de 20L', 'Botella Individual', 'Región Tehuacán',
       'Tecnología Certificada', 'De la Naturaleza a tu Hogar'
     ];
     const buildSet = () => items.map(txt =>
