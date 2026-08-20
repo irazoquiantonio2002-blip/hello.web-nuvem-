@@ -150,7 +150,7 @@
   }
 
   /* ---------- Contact form → WhatsApp ---------- */
-  const WA_NUMBER = '522281603426';
+  const WA_NUMBER = '522381503429';
   const form = document.getElementById('wa-form');
   if (form) {
     form.addEventListener('submit', (e) => {
